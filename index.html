@@ -391,6 +391,74 @@
             { q: "Which ADO.NET method is executed on a MySqlCommand object for INSERT, UPDATE, or DELETE operations?", options: ["A. ExecuteReader()", "B. ExecuteScalar()", "C. ExecuteNonQuery()", "D. ExecuteQuery()"], answer: 2 },
             { q: "Which ADO.NET method is used to return a single scalar value (such as a COUNT(*) or SUM) from a database query?", options: ["A. ExecuteScalar()", "B. ExecuteNonQuery()", "C. ExecuteReader()", "D. ExecuteSingle()"], answer: 0 },
             { q: "Which SQL clause is used to filter records in a SELECT query based on a specific condition?", options: ["A. FILTER BY", "B. WHERE", "C. HAVING", "D. CONDITION"], answer: 1 },
+            { q: "Which SQL kene';
+                osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.05);
+                gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.05);
+            } else if (type === 'correct') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(450, audioCtx.currentTime + 0.1);
+                osc.frequency.setValueAtTime(600, audioCtx.currentTime + 0.2);
+                gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.35);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.35);
+            } else if (type === 'incorrect') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(180, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(120, audioCtx.currentTime + 0.15);
+                gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            }
+        }
+
+        // Full 50 Questions Database (OOP1 Final Exam)
+        const rawQuestions = [
+            { q: "Which VB.NET control is specifically designed to present a dropdown list of selectable items to the user?", options: ["A. TextBox", "B. ComboBox", "C. CheckBox", "D. PictureBox"], answer: 1 },
+            { q: "Which property determines the text displayed inside a Button control?", options: ["A. Name", "B. Text", "C. Caption", "D. Label"], answer: 1 },
+            { q: "Which event is triggered when a user clicks on a Button control in VB.NET?", options: ["A. Load", "B. TextChanged", "C. Click", "D. DoubleClick"], answer: 2 },
+            { q: "Which data type is most appropriate for storing a user's age in whole numbers?", options: ["A. String", "B. Boolean", "C. Integer", "D. Double"], answer: 2 },
+            { q: "Which symbol is used for single-line comments in VB.NET?", options: ["A. //", "B. #", "C. '", "D. /*"], answer: 2 },
+            { q: "Which VB.NET control is specifically designed to display non-editable descriptive text or instructions on a form?", options: ["A. TextBox", "B. Label", "C. Button", "D. ListBox"], answer: 1 },
+            { q: "Scenario: You need a control that allows a user to type in a multi-line user address. Which control fits best?", options: ["A. Label", "B. TextBox with Multiline set to True", "C. ComboBox", "D. RadioButton"], answer: 1 },
+            { q: "Which property of a TextBox control retrieves or sets the text currently entered by the user?", options: ["A. Value", "B. Caption", "C. Text", "D. Content"], answer: 2 },
+            { q: "How do you clear the text inside a TextBox named txtInput in code?", options: ["A. txtInput.Clear()", "B. txtInput.Delete()", "C. txtInput.Text = Null", "D. txtInput.Remove()"], answer: 0 },
+            { q: "Which operator is used for string concatenation in VB.NET?", options: ["A. +", "B. &", "C. .", "D. *"], answer: 1 },
+            { q: "Which structure is used in VB.NET for conditional branching based on multiple distinct values of an expression?", options: ["A. If...Else", "B. Select Case", "C. For...Next", "D. Do...While"], answer: 1 },
+            { q: "Scenario: You are creating a survey form with two separate sections: 'Gender' and 'Payment Method'. To ensure users select only one gender option independently of payment methods, what should you use?", options: ["A. Put all radio buttons directly on the form", "B. Group radio buttons inside separate GroupBox or Panel containers", "C. Use checkboxes for everything", "D. Use disabled textboxes"], answer: 1 },
+            { q: "Which property makes a control invisible to the user on the form when set to False?", options: ["A. Enabled", "B. Visible", "C. Active", "D. Show"], answer: 1 },
+            { q: "Which loop structure is ideal when you know the exact number of iterations beforehand?", options: ["A. Do While", "B. Do Until", "C. For...Next", "D. While...End While"], answer: 2 },
+            { q: "What is the correct syntax to declare a constant integer named MAX_SCORE with a value of 100 in VB.NET?", options: ["A. Dim MAX_SCORE As Integer = 100", "B. Const MAX_SCORE As Integer = 100", "C. Constant MAX_SCORE = 100", "D. Static MAX_SCORE As Integer = 100"], answer: 1 },
+            { q: "Scenario: An e-commerce form asks users to pick their hobbies (e.g., Reading, Gaming, Sports). Which control allows users to select multiple options simultaneously?", options: ["A. RadioButton", "B. ComboBox", "C. CheckBox", "D. MainMenu"], answer: 2 },
+            { q: "Which method is used to close a Windows Forms application window programmatically?", options: ["A. Me.Stop()", "B. Me.Close()", "C. Application.Exit()", "D. Both B and C"], answer: 3 },
+            { q: "What does the acronym OOP stand for in programming?", options: ["A. Ordered Operational Processing", "B. Object-Oriented Programming", "C. Open Online Protocol", "D. Optimized Output Procedure"], answer: 1 },
+            { q: "In OOP, what is a blueprint or template used to create objects called?", options: ["A. Method", "B. Class", "C. Variable", "D. Module"], answer: 1 },
+            { q: "Which OOP pillar refers to bundling data and methods that operate on that data within a single unit (class)?", options: ["A. Inheritance", "B. Polymorphism", "C. Encapsulation", "D. Abstraction"], answer: 2 },
+            { q: "Which access modifier restricts member visibility strictly to within its own class definition?", options: ["A. Public", "B. Private", "C. Protected", "D. Friend"], answer: 1 },
+            { q: "What is the special method called automatically when an object of a class is instantiated?", options: ["A. Destructor", "B. Constructor", "C. Initializer", "D. Builder"], answer: 1 },
+            { q: "Which Form property is assigned to a button (e.g., 'Cancel') so that pressing the 'Esc' key clicks it automatically?", options: ["A. AcceptButton", "B. CancelButton", "C. DefaultButton", "D. EscapeButton"], answer: 1 },
+            { q: "Which control is used to organize multiple tabbed pages of content within a single form window?", options: ["A. Panel", "B. GroupBox", "C. TabControl", "D. ListView"], answer: 2 },
+            { q: "How do you add a new item programmatically to a ComboBox named cbCountries?", options: ["A. cbCountries.Items.Add(\"Philippines\")", "B. cbCountries.Add(\"Philippines\")", "C. cbCountries.Text = \"Philippines\"", "D. cbCountries.Insert(\"Philippines\")"], answer: 0 },
+            { q: "Which property of a ComboBox or ListBox returns the index of the currently selected item?", options: ["A. SelectedItem", "B. SelectedValue", "C. SelectedIndex", "D. ItemIndex"], answer: 2 },
+            { q: "What is returned by SelectedIndex when no item is selected in a ListBox?", options: ["A. 0", "B. -1", "C. False", "D. Null"], answer: 1 },
+            { q: "Which event fires immediately when a user changes the active selection in a ComboBox?", options: ["A. TextChanged", "B. SelectedIndexChanged", "C. Click", "D. ValueChanged"], answer: 1 },
+            { q: "Scenario: You want to programmatically switch the visible tab page to the second tab in code. What property/method is used on a TabControl named tcMain?", options: ["A. tcMain.SelectedIndex = 1", "B. tcMain.TabPages(1).Show()", "C. tcMain.ActiveTab = 1", "D. tcMain.Switch(1)"], answer: 0 },
+            { q: "Which property determines whether a Timer control is actively ticking or stopped?", options: ["A. Running", "B. Enabled", "C. Active", "D. TickStatus"], answer: 1 },
+            { q: "Which event fires repeatedly at every set interval of an active Timer control?", options: ["A. Elapsed", "B. Interval", "C. Tick", "D. Timeout"], answer: 2 },
+            { q: "Which control is used to display tabular rows and columns of data, often connected to a database?", options: ["A. ListBox", "B. DataGridView", "C. ComboBox", "D. TableLayout"], answer: 1 },
+            { q: "Which ADO.NET object is used to establish a live connection to a MySQL database?", options: ["A. MySqlCommand", "B. MySqlConnection", "C. MySqlDataAdapter", "D. MySqlDataReader"], answer: 1 },
+            { q: "Which SQL command is used to retrieve data records from a database table?", options: ["A. GET", "B. SELECT", "C. FETCH", "D. QUERY"], answer: 1 },
+            { q: "Which event fires in a DataGridView when a user double-clicks inside any grid cell?", options: ["A. CellClick", "B. CellDoubleClick", "C. RowEnter", "D. DoubleClickGrid"], answer: 1 },
+            { q: "What is the primary purpose of parameterized queries in database programming?", options: ["A. To make SQL queries run faster", "B. To prevent SQL Injection vulnerabilities", "C. To shorten query text length", "D. To bypass database passwords"], answer: 1 },
+            { q: "Which ADO.NET method is executed on a MySqlCommand object for INSERT, UPDATE, or DELETE operations?", options: ["A. ExecuteReader()", "B. ExecuteScalar()", "C. ExecuteNonQuery()", "D. ExecuteQuery()"], answer: 2 },
+            { q: "Which ADO.NET method is used to return a single scalar value (such as a COUNT(*) or SUM) from a database query?", options: ["A. ExecuteScalar()", "B. ExecuteNonQuery()", "C. ExecuteReader()", "D. ExecuteSingle()"], answer: 0 },
+            { q: "Which SQL clause is used to filter records in a SELECT query based on a specific condition?", options: ["A. FILTER BY", "B. WHERE", "C. HAVING", "D. CONDITION"], answer: 1 },
             { q: "Which SQL ke audioCtx.currentTime);
                 osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.05);
                 gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
